@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Root-level generated/legacy output files
+/delivery.zip
+/cleaned_dataset.csv
+/dashboard.html
+
+# Generator and utility scripts (outputs are committed, not the generators)
+src/generate_report.py
+src/generate_pdf_report.py
+src/package_delivery.py
+src/run_queries.py
+
+# Scratch/exploration scripts
+explore*.py
+data_prep.py
+dashboard_generator.py
+build_delivery.py
+run_sql.py
+redate*.py
+redate*.sh
