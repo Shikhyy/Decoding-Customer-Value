@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 11pt;
+    color: #1A1A2E;
+    background: #fff;
+    line-height: 1.6;
+  }
+  /* ── Cover Page ── */
+  .cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px;
+    background: linear-gradient(135deg, #0D1117 0%, #161B22 100%);
+    color: #E6EDF3;
+    page-break-after: always;
+  }
+  .cover-tag {
+    font-size: 10pt;
+    color: #58A6FF;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-size: 38pt;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .cover h1 span { color: #58A6FF; }
+  .cover-sub {
+    font-size: 14pt;
+    color: #8B949E;
+    margin-bottom: 48px;
+    max-width: 500px;
+  }
+  .cover-meta {
+    font-size: 10pt;
+    color: #8B949E;
+    border-top: 1px solid #30363D;
+    padding-top: 24px;
+    width: 100%;
+  }
+  .cover-meta strong { color: #E6EDF3; }
+  /* ── KPI Boxes (cover) ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .kpi-box {
+    background: rgba(88,166,255,0.1);
+    border: 1px solid #30363D;
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .kpi-box .val { font-size: 22pt; font-weight: 700; color: #58A6FF; }
+  .kpi-box .lbl { font-size: 8pt; color: #8B949E; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  /* ── Content Pages ── */
+  .page { padding: 56px 72px; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  h2 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #0D1117;
+    border-bottom: 3px solid #58A6FF;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-size: 13pt;
+    font-weight: 600;
+    color: #1A1A2E;
+    margin: 24px 0 10px;
+  }
+  p { margin-bottom: 12px; color: #3D3D5C; }
+  ul, ol { padding-left: 24px; margin-bottom: 12px; color: #3D3D5C; }
+  li { margin-bottom: 6px; }
+
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 10pt; }
+  thead tr { background: #0D1117; color: #E6EDF3; }
+  thead th { padding: 10px 12px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(even) { background: #F6F8FF; }
+  tbody td { padding: 9px 12px; border-bottom: 1px solid #E2E8F0; color: #1A1A2E; }
+
+  /* ── Callout boxes ── */
+  .callout {
+    border-left: 4px solid #58A6FF;
+    background: #EFF6FF;
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin: 16px 0;
+    font-size: 10pt;
+    color: #1A3A5C;
+  }
+  .callout.warning {
+    border-color: #D29922;
+    background: #FFF8ED;
+    color: #5C3D00;
+  }
+  .callout.success {
+    border-color: #3FB950;
+    background: #EDFFF5;
+    color: #0A3A1A;
+  }
+  .callout.danger {
+    border-color: #F85149;
+    background: #FFF0F0;
+    color: #5C0A0A;
+  }
+  .callout strong { display: block; font-weight: 700; margin-bottom: 4px; }
+
+  /* ── Section header strip ── */
+  .section-num {
+    display: inline-block;
+    background: #0D1117;
+    color: #58A6FF;
+    font-size: 10pt;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <div class="cover-tag">Customer Intelligence Report · June 2025</div>
+  <h1>Decoding<br>Customer <span>Value</span></h1>
+  <p class="cover-sub">A SQL-Driven Retention Strategy for a D2C Fashion Brand</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-box">
+      <div class="val">3,900</div>
+      <div class="lbl">Customers Analysed</div>
+    </div>
+    <div class="kpi-box">
+      <div class="val">7.7%</div>
+      <div class="lbl">High-Value Tier</div>
+    </div>
+    <div class="kpi-box">
+      <div class="val">43%</div>
+      <div class="lbl">Promo Dependency</div>
+    </div>
+    <div class="kpi-box">
+      <div class="val">$60</div>
+      <div class="lbl">Avg Transaction</div>
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <strong>Prepared by:</strong> Shikhar &nbsp;·&nbsp;
+    <strong>Dataset:</strong> 3,900 D2C customer records &nbsp;·&nbsp;
+    <strong>Scope:</strong> Data Preparation · SQL Analysis · Dashboard · Playbook
+  </div>
+</div>
+
+
+<!-- ══════════ PAGE 1 — EXECUTIVE SUMMARY ══════════ -->
+<div class="page">
+  <div class="section-num">01 / EXECUTIVE SUMMARY</div>
+  <h2>Executive Summary</h2>
+
+  <p>
+    This report presents a structured customer intelligence analysis for a direct-to-consumer (D2C)
+    fashion brand operating across the United States with approximately 3,900 customers. The founding
+    team asked a single, high-stakes question: <em>"Is the business building a loyal customer base, or
+    is it reliant on continuous promotional activity — and what should we do about it?"</em>
+  </p>
+
+  <p>
+    Using only transactional and behavioural data (no loyalty scores, no churn labels, no timestamps),
+    we engineered custom metrics to define value, measure satisfaction, and quantify promo dependency.
+    We then built a segmentation layer in SQL to extract actionable intelligence across customers,
+    geographies, and product categories.
+  </p>
+
+  <h3>Core Findings</h3>
+
+  <div class="callout warning">
+    <strong>⚠ Promo Dependency Is High but Misdirected</strong>
+    43% of all purchases used a discount or promo code. Critically, loyal customers (≥38 prior
+    purchases) with <em>low</em> promo reliance spend more on average ($60.58) than heavily
+    promo-reliant buyers ($60.04). The discount programme is subsidising purchases that would
+    have happened anyway.
+  </div>
+
+  <div class="callout success">
+    <strong>✓ Organic Geographic Pull Exists</strong>
+    Arizona, Virginia, Michigan, Tennessee, and Texas all show above-average spend with promo
+    dependency below 40% — clear indicators of genuine brand affinity that has never been
+    deliberately targeted.
+  </div>
+
+  <div class="callout danger">
+    <strong>✗ Three Segments Are Margin Drains</strong>
+    Summer Clothing, Summer Footwear, and Fall Outerwear combine high promo reliance (45%+) with
+    a 30–32% concentration of Low-value customers. These are prime candidates for a structured
+    promotional sunset.
+  </div>
+
+  <h3>Strategic Recommendation</h3>
+  <p>
+    Phase out category-wide public discounts in the three identified sunset segments over six weeks,
+    replacing them with behavioural triggers (e.g., 48-hour cart abandonment → free shipping).
+    Simultaneously, shift acquisition spend toward Male Gen X / Boomer customers in organic-pull
+    geographies, using Accessories as the entry-point hook — the category with the highest average
+    customer tenure.
+  </p>
+</div>
+
+
+<!-- ══════════ PAGE 2 — METHODOLOGY ══════════ -->
+<div class="page">
+  <div class="section-num">02 / METHODOLOGY</div>
+  <h2>Analytical Methodology</h2>
+
+  <h3>Dataset & Constraints</h3>
+  <p>
+    The raw dataset contains 3,900 rows with 18 columns per customer: demographics (age,
+    gender, location), transaction details (item, category, spend, season), behavioural signals
+    (frequency, previous purchases, subscription status), and promotional usage (discount applied,
+    promo code used, shipping type).
+  </p>
+  <p>
+    <strong>Key constraint:</strong> No loyalty score, no churn label, and no timestamps exist.
+    Every analytical concept must be constructed from available variables.
+  </p>
+
+  <h3>Feature Engineering</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>Formula / Logic</th><th>Business Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><strong>dependency_score</strong></td>
+          <td>(Discount_Flag + Promo_Flag) ÷ 2</td>
+          <td>Measures promo reliance per transaction (0 = organic, 1 = fully incentivised)</td></tr>
+      <tr><td><strong>satisfaction_flag</strong></td>
+          <td>Review Rating ≥ 4.0 → 1 else 0</td>
+          <td>Binary high-satisfaction signal (consistent with NPS 'promoter' zone)</td></tr>
+      <tr><td><strong>freq_numeric</strong></td>
+          <td>Frequency label → annual purchase count</td>
+          <td>Normalises frequency strings to a comparable numeric scale</td></tr>
+      <tr><td><strong>composite_value_score</strong></td>
+          <td>40% tenure + 40% freq_rank + 20% spend_rank</td>
+          <td>Holistic value proxy weighting proven behaviour over single-transaction spend</td></tr>
+      <tr><td><strong>value_tier</strong></td>
+          <td>Top 25% → High; 40–75% → Medium; Bottom → Low</td>
+          <td>Actionable customer tier for targeted strategy</td></tr>
+      <tr><td><strong>loyalty_volume</strong></td>
+          <td>Previous Purchases ≥ 75th pct (≈38)</td>
+          <td>Definition A: proven historical repeat behaviour</td></tr>
+      <tr><td><strong>loyalty_frequency</strong></td>
+          <td>freq_numeric ≥ 26 AND satisfaction_flag = 1</td>
+          <td>Definition B: engaged, satisfied, high-frequency buyer</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Loyalty Definition Validation</h3>
+  <div class="callout">
+    <strong>Why Volume-Based Loyalty Was Chosen</strong>
+    Pearson correlation with Purchase Amount: Volume-Based = +0.0142 vs Frequency-Based = −0.0116.
+    The Volume model is directionally positive and internally consistent — customers with more past
+    purchases have <em>proven</em> they return independently of promotional incentives. The
+    Frequency model inadvertently captures recent-only behaviour which is more susceptible to
+    seasonal noise.
+  </div>
+</div>
+
+
+<!-- ══════════ PAGE 3 — KEY FINDINGS ══════════ -->
+<div class="page">
+  <div class="section-num">03 / KEY FINDINGS</div>
+  <h2>Key Findings</h2>
+
+  <h3>Finding 1 — Loyalty Segments vs Promo Dependency</h3>
+  <table>
+    <thead><tr><th>Loyalty Segment</th><th>Promo Reliance</th><th>Count</th><th>Avg Spend ($)</th><th>Avg Tenure</th></tr></thead>
+    <tbody>
+      <tr><td>Loyal</td><td>Low (No Incentives)</td><td>556</td><td>$60.58</td><td>43.9</td></tr>
+      <tr><td>Loyal</td><td>High (Both Discount + Promo)</td><td>442</td><td>$60.04</td><td>44.1</td></tr>
+      <tr><td>Non-Loyal</td><td>Low (No Incentives)</td><td>1,667</td><td>$59.98</td><td>18.8</td></tr>
+      <tr><td>Non-Loyal</td><td>High (Both Discount + Promo)</td><td>1,235</td><td>$59.01</td><td>19.2</td></tr>
+    </tbody>
+  </table>
+  <p><em>Insight:</em> Loyal customers spend equally regardless of promo usage. Discounts are not converting Non-Loyal buyers into repeat purchasers.</p>
+
+  <h3>Finding 2 — Geographic Opportunity</h3>
+  <p>States with organic pull (spend &gt; $60, promo dependency &lt; 40%):</p>
+  <ul><li>Arizona</li><li>Michigan</li><li>Montana</li><li>Rhode Island</li><li>South Dakota</li><li>Tennessee</li></ul>
+  <p>These markets have never been deliberately targeted. Arizona alone averages $66.55 per transaction with only 33.8% promo dependency.</p>
+
+  <h3>Finding 3 — Category Funnel</h3>
+  <table>
+    <thead><tr><th>Category</th><th>Avg Tenure</th><th>Avg Spend ($)</th><th>Funnel Role</th></tr></thead>
+    <tbody>
+      <tr><td>Accessories</td><td>25.7</td><td>$59.84</td><td><strong>Retention Anchor</strong></td></tr>
+      <tr><td>Footwear</td><td>25.2</td><td>$60.26</td><td>Entry Point</td></tr>
+      <tr><td>Clothing</td><td>25.2</td><td>$60.03</td><td>Entry Point</td></tr>
+      <tr><td>Outerwear</td><td>25.0</td><td>$57.17</td><td>Entry Point</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Finding 4 — Promotional Sunset Candidates</h3>
+  <table>
+    <thead><tr><th>Category</th><th>Season</th><th>% Low-Value Customers</th><th>Avg Promo Dependency</th></tr></thead>
+    <tbody><tr><td>Clothing</td><td>Summer</td><td>32.4%</td><td>45.1%</td></tr><tr><td>Footwear</td><td>Summer</td><td>31.9%</td><td>45.6%</td></tr><tr><td>Outerwear</td><td>Fall</td><td>30.7%</td><td>45.5%</td></tr></tbody>
+  </table>
+</div>
+
+
+<!-- ══════════ PAGE 4 — RETENTION PLAYBOOK ══════════ -->
+<div class="page">
+  <div class="section-num">04 / RETENTION PLAYBOOK</div>
+  <h2>Retention Playbook</h2>
+
+  <h3>1. Promotional Sunset Plan</h3>
+
+  <p>
+    The data identifies three specific category × season combinations as prime sunset candidates:
+    <strong>Summer Clothing, Summer Footwear, and Fall Outerwear</strong>. These segments show
+    the highest convergence of high promo reliance (45%+) and a disproportionate share of
+    Low-value customers (30–32%).
+  </p>
+
+  <div class="callout warning">
+    <strong>Trade-off</strong>
+    Removing public discounts may cause a 10–15% short-term volume drop in these segments as
+    bargain hunters churn. However, since these customers are disproportionately low-value with
+    shallow tenure, the impact on total LTV is minimal. Net margin per transaction will rise by
+    the discount rate (estimated 15–20%).
+  </div>
+
+  <table>
+    <thead><tr><th>Phase</th><th>Timeline</th><th>Action</th><th>Metric to Track</th></tr></thead>
+    <tbody>
+      <tr><td>1. A/B Test</td><td>Week 1–2</td><td>50% of traffic sees no category discount in sunset segments</td><td>Net margin $ per cohort</td></tr>
+      <tr><td>2. Evaluate</td><td>Week 3–4</td><td>If B-test margin &gt; A-test, expand to 80% of traffic</td><td>90-day repeat purchase rate</td></tr>
+      <tr><td>3. Full Sunset</td><td>Week 5–6</td><td>Remove all public % discounts. Replace with 48h cart-abandon → free shipping trigger</td><td>Avg order value, churn rate by segment</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    <strong>Trigger Behaviour:</strong> Instead of public seasonal sales, implement personalised
+    behavioural triggers. A customer who adds Summer Footwear to cart and leaves for 48 hours
+    receives a <em>free shipping</em> offer — which costs the brand ~$4–5 vs a 15–20% discount
+    that costs $9–12 on a $60 AOV.
+  </p>
+
+  <h3>2. Ideal Customer Profile (ICP)</h3>
+
+  <table>
+    <thead><tr><th>Attribute</th><th>Profile</th></tr></thead>
+    <tbody>
+      <tr><td>Gender</td><td>Male</td></tr>
+      <tr><td>Age Cohort</td><td>Gen X (36–50) or Boomers (51+)</td></tr>
+      <tr><td>Geography</td><td>Arizona, Virginia, Tennessee, Michigan (organic pull states)</td></tr>
+      <tr><td>Entry Category</td><td>Accessories (highest retention anchor)</td></tr>
+      <tr><td>Purchase Frequency</td><td>Weekly to Bi-Weekly</td></tr>
+      <tr><td>Avg Spend</td><td>$76–$85 per transaction</td></tr>
+      <tr><td>Avg Tenure</td><td>40+ previous purchases</td></tr>
+      <tr><td>Promo Dependency</td><td>Low — buys without discount incentives</td></tr>
+      <tr><td>Payment Preference</td><td>Bank Transfer / Credit Card</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout success">
+    <strong>Acquisition Strategy</strong>
+    Shift ad creative from "sale/discount" messaging to "quality, reliability, and convenience"
+    targeted at Men 36+ in the six organic-pull states. Lead with Accessories in top-of-funnel
+    creative — data proves it produces the longest customer tenure. Deprioritise Gen Z / heavily
+    promotional channels during Summer and Fall.
+  </div>
+
+  <div class="callout">
+    <strong>Summary Recommendation</strong>
+    The business is partially reliant on promotional activity, but this dependency is concentrated
+    in specific, low-value segments — not spread across the entire customer base. The strategic
+    action is not to eliminate promos entirely, but to surgically remove them from segments where
+    they are not generating long-term value, and redirect that budget into acquiring more customers
+    who look like the high-value ICP defined above.
+  </div>
+</div>
+
+</body>
+</html>
