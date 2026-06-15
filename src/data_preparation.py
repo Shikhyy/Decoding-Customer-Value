@@ -14,7 +14,7 @@ Engineered Features:
     - freq_numeric       : Numeric purchase frequency (visits per year)
     - age_group          : Customer cohort label by age band
 
-Author: Shikhar
+Author: Shikhar and Shreya
 """
 
 import pandas as pd
