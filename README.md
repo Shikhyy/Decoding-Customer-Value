@@ -32,13 +32,11 @@ Decoding-Customer-Value/
 │   ├── data_preparation.py       # Data cleaning + feature engineering pipeline
 │   ├── run_queries.py            # Execute SQL against cleaned data via DuckDB
 │   ├── dashboard.py              # Generate interactive 6-panel HTML dashboard
-│   ├── generate_report.py        # Generate HTML version of the report
-│   └── generate_pdf_report.py    # Generate professional PDF report (ReportLab)
+│   ├── generate_ppt_report.py    # Generate professional PowerPoint (.pptx) report
 │
 ├── reports/
 │   ├── dashboard.html            # Interactive Plotly dashboard (open in browser)
-│   ├── customer_intelligence_report.html  # Full HTML report
-│   └── customer_intelligence_report.pdf   # Printable PDF report
+│   └── customer_intelligence_presentation.pptx  # 8-slide PowerPoint report
 │
 └── README.md
 ```
@@ -52,7 +50,7 @@ Decoding-Customer-Value/
 | 1 | Cleaned Dataset + Engineered Features | `data/cleaned_dataset.csv` |
 | 2 | SQL Segmentation Queries | `sql/segmentation_analysis.sql` |
 | 3 | Interactive 6-Panel Dashboard | `reports/dashboard.html` |
-| 4 | Customer Intelligence PDF Report | `reports/customer_intelligence_report.pdf` |
+| 4 | Customer Intelligence PPT Report | `reports/customer_intelligence_presentation.pptx` |
 
 ---
 
@@ -116,10 +114,10 @@ python3 src/dashboard.py
 # Open reports/dashboard.html in your browser
 ```
 
-### 5. Generate PDF Report
+### 5. Generate PPT Report
 ```bash
-python3 src/generate_pdf_report.py
-# Output: reports/customer_intelligence_report.pdf
+python3 src/generate_ppt_report.py
+# Output: reports/customer_intelligence_presentation.pptx
 ```
 
 ---
